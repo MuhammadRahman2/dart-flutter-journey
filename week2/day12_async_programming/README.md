@@ -32,4 +32,16 @@ output
 
 
 
+## 4.WHAT? STREAM (Continuous Data)
 
+- Stream = multiple values over time
+
+## 3. WHY? async & await (Make it simple)
+
+- To write async code like normal code.
+
+
+### Example
+
+- Future → one result
+- Stream → many results
