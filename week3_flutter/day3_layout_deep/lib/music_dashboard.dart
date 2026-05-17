@@ -30,16 +30,13 @@ class MusicDashboard extends StatelessWidget {
               ),
             ),
 
-            SizedBox(
-              height: 40,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Icon(Icons.arrow_back, size: 40),
-                  Text('title'),
-                  Icon(Icons.play_arrow, size: 50),
-                ],
-              ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Icon(Icons.arrow_back, size: 40),
+                Text('title'),
+                Icon(Icons.play_arrow, size: 50),
+              ],
             ),
           ],
         ),
