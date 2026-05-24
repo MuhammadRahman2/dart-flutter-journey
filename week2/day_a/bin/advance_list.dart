@@ -10,5 +10,7 @@ void main() {
   // print(filters);
 
   //// loop
-  numbers.forEach((n) => print(n));
+  for (var n in numbers) {
+    print(n);
+  }
 }
