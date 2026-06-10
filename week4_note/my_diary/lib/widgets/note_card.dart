@@ -3,38 +3,52 @@ import 'package:flutter/material.dart';
 class NoteCard extends StatelessWidget {
   final String title;
   final String content;
-  final VoidCallback onTap;
-  final VoidCallback onLongTap;
-  const NoteCard({super.key,required this.title,required this.content, required this.onTap, required this.onLongTap});
+  final VoidCallback onEditTap;
+  final VoidCallback onDeleteTap;
+  const NoteCard({super.key,required this.title,required this.content, required this.onEditTap, required this.onDeleteTap});
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: onTap,
-      onLongPress: onLongTap,
+    return AnimatedContainer(
+      duration:const Duration(milliseconds: 300),
       child: Card(
-        elevation: 4,
+        elevation: 5,
         shadowColor: Colors.purple.withValues(alpha: 0.3),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
         child: Padding(
-          padding: EdgeInsets.all(12.0),
+          padding: EdgeInsets.all(18.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [Text(title, style: TextStyle(
+            children: [
+              Text(title, style: TextStyle(
               fontWeight: FontWeight.bold,
-              fontSize: 18,
-              color: Color(0xFF1C1B1F),
+              fontSize: 20,
+              // color: Color(0xFF1C1B1F),
             ),
             ),
-            const SizedBox(height: 8),
+            const SizedBox(height: 12),
             Text(content,
-                style: const TextStyle(color: Colors.black54),
+                style: const TextStyle(
+                  color: Colors.black54,
+                  height: 1.5,
+                  ),             
               ),
-            const Spacer(),
-              Align(
-                alignment: Alignment.bottomRight,
-                child: Icon(Icons.edit, color: Colors.deepPurple),
+             const Divider(),
+            // const Spacer(),
+              Row(
+          mainAxisAlignment:
+              MainAxisAlignment.end,
+          children:  [
+            IconButton(
+              onPressed: onEditTap,
+              icon: Icon(Icons.edit_outlined),
               ),
+            SizedBox(width: 12),
+            IconButton(
+              onPressed: onDeleteTap,
+              icon: Icon(Icons.delete_outline)),
+          ],
+        ),
             ],
           ),
         ),

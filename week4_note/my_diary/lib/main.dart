@@ -14,8 +14,9 @@ class MyDiary extends StatelessWidget {
       title: 'My Diary',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        scaffoldBackgroundColor: const Color(0xffF8F7FC),
       ),
       home: MyDiaryHomePage(),
     );
