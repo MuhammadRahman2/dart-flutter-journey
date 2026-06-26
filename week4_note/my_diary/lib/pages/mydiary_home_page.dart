@@ -119,36 +119,27 @@ class _MyDiaryHomePageState extends State<MyDiaryHomePage> {
 }
 
 class NoData extends StatelessWidget {
-  const NoData({
-    super.key,
-  });
+  const NoData({super.key});
 
   @override
   Widget build(BuildContext context) {
     return const Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children:  [
-            Icon(
-              Icons.note_alt_outlined,
-              size: 100,
-              color: Colors.grey,
-            ),
-            SizedBox(height: 20),
-            Text(
-              "No notes yet",
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            SizedBox(height: 8),
-            Text(
-              "Tap New Note to start writing",
-              style: TextStyle(color: Colors.grey),
-            ),
-          ],
-        ),
-      );
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Icon(Icons.note_alt_outlined, size: 100, color: Colors.grey),
+          SizedBox(height: 20),
+          Text(
+            "No notes yet",
+            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+          ),
+          SizedBox(height: 8),
+          Text(
+            "Tap New Note to start writing",
+            style: TextStyle(color: Colors.grey),
+          ),
+        ],
+      ),
+    );
   }
 }
