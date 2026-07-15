@@ -9,7 +9,7 @@ class User {
 }
 
 class Admin extends User {
-  Admin(String name) : super(name);
+  Admin(super.name);
 
   void deleteUser() {
     print("Admin can delete user ");
